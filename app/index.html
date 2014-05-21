@@ -23,7 +23,25 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
-    <div class="container" ng-view=""></div>
+
+    <header ng-controller="NavCtrl as nav">
+      <h1>Musiquinha</h1>
+      <ul>
+        <li><a ng-click="nav.changeRoute('/')">inicio</a></li>
+        <li><a ng-click="nav.changeRoute('/songs')">Musicas</a></li>
+      </ul>
+    </header>
+
+    <div class="container" ng-view="">
+    </div>
+
+    <div ng-controller="PlayerCtrl as player" ng-show="isActive">
+      song name: {{ song.title }}
+    </div>
+
+    <footer>
+      <p>angular.js sandbox</p>
+    </footer>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
      <script>
