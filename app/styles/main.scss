@@ -1,0 +1,49 @@
+$colourHeader: #6597d6;
+$colourFooter: #efefef;
+
+@import "compass/reset.scss";
+@import "compass/layout.scss";
+@import "compass/css3/transition";
+
+.windowWrap{
+    padding: 10px 20px;
+}
+
+a{
+    @include transition(all 0.3s ease-in-out);
+    cursor: pointer;
+    &:hover{
+        text-decoration: underline;
+        color:blue;
+    }
+}
+
+h2{
+    font-size: 22px;
+    margin:10px 0;
+}
+
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+header{
+    @extend .windowWrap;
+    background-color: $colourHeader;
+    color:#FFF;
+}
+
+#main{
+    .container{
+        @extend .windowWrap;
+    }
+}
+
+footer{
+    @extend .windowWrap;
+    @include transition(all 0.3s ease-in-out);
+    background-color: $colourFooter;
+    position: fixed;
+    width: 100%;
+    bottom: 0px;
+}
