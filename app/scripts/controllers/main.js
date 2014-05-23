@@ -1,6 +1,6 @@
 'use strict';
 
-(function(){
+
 
   var app = angular.module('musiquinhaApp');
 
@@ -16,4 +16,4 @@
     {title:'5ghg', cover: '//i1.sndcdn.com/artworks-000079522528-q7gq4p-t500x500.jpg?30a2558'},
   ];
 
-})();
+

@@ -1,5 +1,10 @@
 <h2>{{ message }}</h2>
 
 <ul >
-  <li ng-repeat="song in songs" ><a ng-click="playSong(song)">{{ song.title }}</a></li>
+  <li ng-repeat="song in songs" ><a ng-click="playSong(song)">{{ song.title }}</a> <button class="btn btn-danger" ng-click="delete(song)">Delete</button> </li>
 </ul>
+
+<form ng-submit="saveSong(song)">
+  <input ng-model="song.title">
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

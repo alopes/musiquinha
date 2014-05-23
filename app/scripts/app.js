@@ -5,9 +5,10 @@ angular
     'ngCookies',
     'ngResource',
     'ngSanitize',
-    'ngRoute'
+    'ngRoute',
+    'restangular'
   ])
-  .config(function ($routeProvider) {
+  .config(function ($routeProvider, RestangularProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -20,4 +21,7 @@ angular
       .otherwise({
         redirectTo: '/'
       });
+
+      RestangularProvider.setBaseUrl('http://musiquinha-api.herokuapp.com');
+      RestangularProvider.setRequestSuffix('.json');
   });
